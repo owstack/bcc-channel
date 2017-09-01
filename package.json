@@ -1,6 +1,6 @@
 {
   "name": "bcccore-channel",
-  "version": "1.0.1",
+  "version": "0.0.1",
   "description": "Add payment channels support to bcccore",
   "scripts": {
     "lint": "gulp lint",
