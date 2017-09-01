@@ -1,10 +1,11 @@
-# Payment Channels for Bcccore
+Bcccore Channel
+=======
 
 [![NPM Package](https://img.shields.io/npm/v/bcccore-channel.svg?style=flat-square)](https://www.npmjs.org/package/bcccore-channel)
 [![Build Status](https://img.shields.io/travis/owstack/bcccore-channel.svg?branch=master&style=flat-square)](https://travis-ci.org/owstack/bcccore-channel)
 [![Coverage Status](https://img.shields.io/coveralls/owstack/bcccore-channel.svg?style=flat-square)](https://coveralls.io/r/owstack/bcccore-channel)
 
-A module for [bcccore][bcccore] that implements [Payment Channels][channel]. Payment channels (sometimes referred as micropayment channels) are a type of smart contracts that allow rapidly adjusting bitcoin transactions. This can be used to do trustless simultaneous payments with a service provider without the need of an intermediary, and some other applications.
+Payment Channels for Bcccore.  A module for [bcccore][bcccore] that implements [Payment Channels][channel]. Payment channels (sometimes referred as micropayment channels) are a type of smart contracts that allow rapidly adjusting bitcoin transactions. This can be used to do trustless simultaneous payments with a service provider without the need of an intermediary, and some other applications.
 
 See [the main bcccore repo][bcccore] or the [bcccore guide on Payment Channels](http://bcccore.io/guide/module/channel/index.html) for more information.
 

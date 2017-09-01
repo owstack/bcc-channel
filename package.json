@@ -1,23 +1,12 @@
 {
   "name": "bcccore-channel",
   "version": "0.0.1",
-  "description": "Add payment channels support to bcccore",
+  "description": "Payment Channels support to bcccore.",
   "scripts": {
     "lint": "gulp lint",
     "test": "gulp test",
     "coverage": "gulp coverage"
   },
-  "author": "Open Wallet Stack <dev@openwalletstack.com>",
-  "contributors": [
-    {
-      "name": "Esteban Ordano",
-      "email": "eordano@gmail.com"
-    },
-    {
-      "name": "Manuel Araoz",
-      "email": "manuelaraoz@gmail.com"
-    }
-  ],
   "keywords": [
     "bitcoin",
     "bcccore",
@@ -30,7 +19,7 @@
   "license": "MIT",
   "repository": "https://github.com/owstack/bcccore-channel",
   "dependencies": {
-    "bcccore-lib": "git://github.com/owstack/bcccore-lib.git#master",
+    "bcccore-lib": "git://github.com/owstack/bcccore-lib.git",
     "inherits": "=2.0.1"
   },
   "devDependencies": {

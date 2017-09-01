@@ -3,10 +3,7 @@
   "main": "./bcccore-channel.min.js",
   "version": "0.0.1",
   "homepage": "https://github.com/owstack/bcccore-channel",
-  "authors": [
-    "Open Wallet Stack"
-  ],
-  "description": "Payment Channels implemented for Bcccore.",
+  "description": "Payment Channels support for Bcccore.",
   "moduleType": [
     "globals"
   ],
