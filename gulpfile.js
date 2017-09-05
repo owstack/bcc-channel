@@ -1,5 +1,3 @@
 'use strict';
-
-var gulp_bcccore = require('bcccore-build');
-
-gulp_bcccore('channel');
+var owsTasks = require('ows-build');
+owsTasks('bcccore', 'channel');
