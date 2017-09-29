@@ -1,8 +1,8 @@
 'use strict';
 
 var channel = require('../');
-var bccLib = require('bcc-lib');
+var bchLib = require('bch-lib');
 
-var providerKey = new bccLib.PrivateKey(bccLib.Networks.testnet);
+var providerKey = new bchLib.PrivateKey(bchLib.Networks.testnet);
 
 console.log('provider key: ' + providerKey.toString());

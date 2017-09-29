@@ -1,7 +1,7 @@
 {
-  "name": "bcc-channel",
+  "name": "bch-channel",
   "version": "0.0.1",
-  "description": "Payment Channels support to bcc.",
+  "description": "Payment Channels support to bch.",
   "scripts": {
     "lint": "gulp lint",
     "test": "gulp test",
@@ -9,7 +9,7 @@
   },
   "keywords": [
     "bitcoin",
-    "bcc",
+    "bch",
     "btc",
     "satoshi",
     "payment channels",
@@ -17,9 +17,9 @@
     "smart contract"
   ],
   "license": "MIT",
-  "repository": "https://github.com/owstack/bcc-channel",
+  "repository": "https://github.com/owstack/bch-channel",
   "dependencies": {
-    "bcc-lib": "https://github.com/owstack/bcc-lib",
+    "bch-lib": "https://github.com/owstack/bch-lib",
     "inherits": "=2.0.1"
   },
   "devDependencies": {

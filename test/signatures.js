@@ -1,8 +1,8 @@
 'use strict';
 
 var should = require('chai').should();
-var bccLib = require('bcc-lib');
-var Networks = bccLib.Networks;
+var bchLib = require('bch-lib');
+var Networks = bchLib.Networks;
 
 describe('signature checks', function() {
 
@@ -33,9 +33,9 @@ describe('signature checks', function() {
 
 });
 
-var providerKey = new bccLib.PrivateKey('58e78db594be551a8f4c7070fd8695363992bd1eb37d01cd4a4da608f3dc5c2d', bccLib.Networks.testnet);
-var fundingKey = new bccLib.PrivateKey('79b0630419ad72397d211db4988c98ffcb5955b14f6ec5c5651eec5c98d7e557', bccLib.Networks.testnet);
-var commitmentKey = new bccLib.PrivateKey('17bc93ac93f4a26599d3af49e59206e8276259febba503434eacb871f9bbad75', bccLib.Networks.testnet);
+var providerKey = new bchLib.PrivateKey('58e78db594be551a8f4c7070fd8695363992bd1eb37d01cd4a4da608f3dc5c2d', bchLib.Networks.testnet);
+var fundingKey = new bchLib.PrivateKey('79b0630419ad72397d211db4988c98ffcb5955b14f6ec5c5651eec5c98d7e557', bchLib.Networks.testnet);
+var commitmentKey = new bchLib.PrivateKey('17bc93ac93f4a26599d3af49e59206e8276259febba503434eacb871f9bbad75', bchLib.Networks.testnet);
 var providerAddress = providerKey.toAddress(Networks.testnet);
 
 var getConsumer = function() {

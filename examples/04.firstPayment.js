@@ -2,8 +2,8 @@
 
 var assert = require('assert');
 var fs = require('fs');
-var bccLib = require('bcc-lib');
-var PrivateKey = bccLib.PrivateKey;
+var bchLib = require('bch-lib');
+var PrivateKey = bchLib.PrivateKey;
 var Consumer = require('../lib/Consumer');
 var Commitment = require('../lib/transactions/Commitment');
 
