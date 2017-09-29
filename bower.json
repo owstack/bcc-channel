@@ -1,15 +1,15 @@
 {
-  "name": "bcccore-channel",
-  "main": "./bcccore-channel.min.js",
+  "name": "bcc-channel",
+  "main": "./bcc-channel.min.js",
   "version": "0.0.1",
-  "homepage": "https://github.com/owstack/bcccore-channel",
-  "description": "Payment Channels support for Bcccore.",
+  "homepage": "https://github.com/owstack/bcc-channel",
+  "description": "Payment Channels support for Bcc-node.",
   "moduleType": [
     "globals"
   ],
   "keywords": [
     "bitcoin",
-    "bcccore",
+    "bcc",
     "btc",
     "satoshi",
     "payment channels",
