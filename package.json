@@ -27,7 +27,7 @@
     "chai": "^2.3.0",
     "gulp": "^3.8.10",
     "nodejs-externs": "^0.10.0",
-    "ows-build": "http://github.com/owstack/ows-build",
+    "ows-build": "https://github.com/owstack/ows-build",
     "request": "^2.48.0",
     "vinyl-transform": "^1.0.0"
   }
