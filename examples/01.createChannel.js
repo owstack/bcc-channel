@@ -1,8 +1,8 @@
 'use strict';
 
-var bccLib = require('bcc-lib');
+var bchLib = require('bch-lib');
 var fs = require('fs');
-var PrivateKey = bccLib.PrivateKey;
+var PrivateKey = bchLib.PrivateKey;
 var Consumer = require('../lib/Consumer');
 
 var fundingKey = new PrivateKey('cb5dc68fbcaf37f29139b50fa4664b395c03e49deb966e5d49a629af005d0654');
@@ -20,7 +20,7 @@ var consumer = new Consumer({
   providerAddress: providerKey.toAddress()
 });
 
-var explorer = new bccLib.transport.explorers.Explorer();
+var explorer = new bchLib.transport.explorers.Explorer();
 
 explorer.getUnspentUtxos(consumer.fundingAddress, function(err, utxos) {
   consumer.processFunding(utxos);
