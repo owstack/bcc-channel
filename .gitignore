@@ -36,6 +36,6 @@ node_modules
 *.sw[a-z]
 
 # browser bundles
-bcccore-channel.js
-bcccore-channel.min.js
+bcc-channel.js
+bcc-channel.min.js
 tests.js

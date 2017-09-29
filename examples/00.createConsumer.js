@@ -1,10 +1,11 @@
+'use strict';
+
 var channel = require('../');
-var bcccore = require('bcccore-lib');
+var bccLib = require('bcc-lib');
 
-
-var refundKey = new bcccore.PrivateKey(bcccore.Networks.testnet);
-var fundingKey = new bcccore.PrivateKey(bcccore.Networks.testnet);
-var commitmentKey = new bcccore.PrivateKey(bcccore.Networks.testnet);
+var refundKey = new bccLib.PrivateKey(bccLib.Networks.testnet);
+var fundingKey = new bccLib.PrivateKey(bccLib.Networks.testnet);
+var commitmentKey = new bccLib.PrivateKey(bccLib.Networks.testnet);
 
 console.log('funding key: ' + refundKey.toString());
 console.log('refund key: ' + fundingKey.toString());

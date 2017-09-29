@@ -2,8 +2,8 @@
 
 var assert = require('assert');
 var fs = require('fs');
-var bcccore = require('bcccore-lib');
-var PrivateKey = bcccore.PrivateKey;
+var bccLib = require('bcc-lib');
+var PrivateKey = bccLib.PrivateKey;
 var Consumer = require('../lib/Consumer');
 var Commitment = require('../lib/transactions/Commitment');
 
@@ -30,7 +30,7 @@ var refund = JSON.parse(fs.readFileSync('signed.refund.log'));
 
 if (consumer.validateRefund(refund)) {
   console.log('validated');
-  var explorer = new bcccore.transport.explorers.Explorer();
+  var explorer = new bccLib.transport.explorers.Explorer();
 
   explorer.broadcast(consumer.commitmentTx, function(err, txid) {
     if (err) {

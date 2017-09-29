@@ -1,7 +1,8 @@
+'use strict';
+
 var channel = require('../');
-var bcccore = require('bcccore-lib');
+var bccLib = require('bcc-lib');
 
-
-var providerKey = new bcccore.PrivateKey(bcccore.Networks.testnet);
+var providerKey = new bccLib.PrivateKey(bccLib.Networks.testnet);
 
 console.log('provider key: ' + providerKey.toString());
