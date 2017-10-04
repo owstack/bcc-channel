@@ -1,6 +1,8 @@
 Bch Channel
 =======
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/owstack/bch-channel.svg)](https://greenkeeper.io/)
+
 [![NPM Package](https://img.shields.io/npm/v/bch-channel.svg?style=flat-square)](https://www.npmjs.org/package/bch-channel)
 [![Build Status](https://img.shields.io/travis/owstack/bch-channel.svg?branch=master&style=flat-square)](https://travis-ci.org/owstack/bch-channel)
 [![Coverage Status](https://img.shields.io/coveralls/owstack/bch-channel.svg?style=flat-square)](https://coveralls.io/r/owstack/bch-channel)
