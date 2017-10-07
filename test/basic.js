@@ -3,6 +3,7 @@
 var should = require('chai').should();
 var bchLib = require('@owstack/bch-lib');
 var Networks = bchLib.Networks;
+var PrivateKey = bchLib.PrivateKey;
 
 describe('Simple Payment Channel usage', function() {
 
@@ -19,14 +20,14 @@ describe('Simple Payment Channel usage', function() {
       var obj = consumer.commitmentTx.toObject();
       var expected = {
         'transaction': {
-          'hash': '591ad922bfab0d8d4bd359dbfb6d8006efd1082029af1d3d8bdc690f1908fb37',
+          'hash': '879be5174883e42c67f24493cf59b18e27f485d069db54cfa4a3dec7a3268227',
           'version': 1,
           'inputs': [{
             'prevTxId': '787ef38932601aa6d22b844770121f713b0afb6c13fdd52e512c6165508f47cd',
             'outputIndex': 1,
             'sequenceNumber': 4294967295,
-            'script': '483045022100e5e9a5660ed650b377d1063c57ba210d2f8e36f350489a5b0ca9b46eb8fb659a02205a6d336c2252b39fcb7534fdfc3a593a87b5c34c0d3ad27e25bd5edea027308a012103bca86b6a422d1ffec9fd0a1e8d37feaef4e41f76bbdde68852251b7ae8ca6fab',
-            'scriptString': '72 0x3045022100e5e9a5660ed650b377d1063c57ba210d2f8e36f350489a5b0ca9b46eb8fb659a02205a6d336c2252b39fcb7534fdfc3a593a87b5c34c0d3ad27e25bd5edea027308a01 33 0x03bca86b6a422d1ffec9fd0a1e8d37feaef4e41f76bbdde68852251b7ae8ca6fab',
+            'script': '483045022100be3701052d90d4b16f187bec51cdeead95b5c791419a02f42403fbfc63e5a25a022044e3e6ff5c277e076a3f703fd38480fdbf1fd53b094c7e87b572f172826a4382412103bca86b6a422d1ffec9fd0a1e8d37feaef4e41f76bbdde68852251b7ae8ca6fab',
+            'scriptString': '72 0x3045022100be3701052d90d4b16f187bec51cdeead95b5c791419a02f42403fbfc63e5a25a022044e3e6ff5c277e076a3f703fd38480fdbf1fd53b094c7e87b572f172826a438241 33 0x03bca86b6a422d1ffec9fd0a1e8d37feaef4e41f76bbdde68852251b7ae8ca6fab',
             'output': {
               'satoshis': 50000000,
               'script': '76a91469b678f36c91bf635ff6e9479edd3253a5dfd41a88ac'
@@ -35,15 +36,15 @@ describe('Simple Payment Channel usage', function() {
             'prevTxId': 'c1003b5e2c9f5eca65bde73463035e5dffcfbd3c234e55e069cfeebb513293e4',
             'outputIndex': 0,
             'sequenceNumber': 4294967295,
-            'script': '47304402205d5c5ae33804c2842311bedca88474ee47d49efba2a3aece49e7039551cc98b00220338b5aed644a810b0d92c9717029a1dfe3808f8a5ce74ec4f5cc03c6a7af2148012103bca86b6a422d1ffec9fd0a1e8d37feaef4e41f76bbdde68852251b7ae8ca6fab',
-            'scriptString': '71 0x304402205d5c5ae33804c2842311bedca88474ee47d49efba2a3aece49e7039551cc98b00220338b5aed644a810b0d92c9717029a1dfe3808f8a5ce74ec4f5cc03c6a7af214801 33 0x03bca86b6a422d1ffec9fd0a1e8d37feaef4e41f76bbdde68852251b7ae8ca6fab',
+            'script': '473044022000d7705db0bc5633ded47d1a2b50609ac1225fd34a6ad8edeae477defed822a102202c22c6a5d9b1bacdc4b5e561344ad89c864f0185486e16738b46608f53ca40c5412103bca86b6a422d1ffec9fd0a1e8d37feaef4e41f76bbdde68852251b7ae8ca6fab',
+            'scriptString': '71 0x3044022000d7705db0bc5633ded47d1a2b50609ac1225fd34a6ad8edeae477defed822a102202c22c6a5d9b1bacdc4b5e561344ad89c864f0185486e16738b46608f53ca40c541 33 0x03bca86b6a422d1ffec9fd0a1e8d37feaef4e41f76bbdde68852251b7ae8ca6fab',
             'output': {
               'satoshis': 10000000,
               'script': '76a91469b678f36c91bf635ff6e9479edd3253a5dfd41a88ac'
             }
           }],
           'outputs': [{
-            'satoshis': 59990000,
+            'satoshis': 59900000,
             'script': 'a914fdeaa734587dfed0090c98fbf1bf8730009ddda887'
           }],
           'nLockTime': 0,
@@ -120,20 +121,21 @@ describe('Simple Payment Channel usage', function() {
       var consumer = getValidatedConsumer().consumer;
       provider.validPayment(consumer.incrementPaymentBy(1000));
       provider.currentAmount.should.equal(1000);
-      provider.paymentTx.getFee().should.equal(10000);
+      provider.paymentTx.getFee().should.equal(100000);
       provider.validPayment(consumer.incrementPaymentBy(1000));
       provider.validPayment(consumer.incrementPaymentBy(1000));
       provider.validPayment(consumer.incrementPaymentBy(1000));
       provider.currentAmount.should.equal(4000);
-      provider.paymentTx.getFee().should.equal(10000);
+      provider.paymentTx.getFee().should.equal(100000);
     });
   });
 });
 
-var providerKey = new bchLib.PrivateKey('58e78db594be551a8f4c7070fd8695363992bd1eb37d01cd4a4da608f3dc5c2d', bchLib.Networks.testnet);
-var fundingKey = new bchLib.PrivateKey('79b0630419ad72397d211db4988c98ffcb5955b14f6ec5c5651eec5c98d7e557', bchLib.Networks.testnet);
-var commitmentKey = new bchLib.PrivateKey('17bc93ac93f4a26599d3af49e59206e8276259febba503434eacb871f9bbad75', bchLib.Networks.testnet);
+var providerKey = new PrivateKey('58e78db594be551a8f4c7070fd8695363992bd1eb37d01cd4a4da608f3dc5c2d', Networks.testnet);
+var fundingKey = new PrivateKey('79b0630419ad72397d211db4988c98ffcb5955b14f6ec5c5651eec5c98d7e557', Networks.testnet);
+var commitmentKey = new PrivateKey('17bc93ac93f4a26599d3af49e59206e8276259febba503434eacb871f9bbad75', Networks.testnet);
 var providerAddress = providerKey.toAddress(Networks.testnet);
+var fundingAddress = fundingKey.toAddress(Networks.testnet);
 
 var getConsumer = function() {
 
@@ -159,7 +161,7 @@ var getConsumer = function() {
 var getFundedConsumer = function() {
   var result = getConsumer();
   result.consumer.processFunding([{
-    'address': 'mq9uqc4W8phHXRPt3ZWUdRpoZ9rkR67Dw1',
+    'address': fundingAddress,
     'txid': '787ef38932601aa6d22b844770121f713b0afb6c13fdd52e512c6165508f47cd',
     'vout': 1,
     'ts': 1416205164,
@@ -167,7 +169,7 @@ var getFundedConsumer = function() {
     'amount': 0.5,
     'confirmationsFromCache': false
   }, {
-    'address': 'mq9uqc4W8phHXRPt3ZWUdRpoZ9rkR67Dw1',
+    'address': fundingAddress,
     'txid': 'c1003b5e2c9f5eca65bde73463035e5dffcfbd3c234e55e069cfeebb513293e4',
     'vout': 0,
     'ts': 1416196853,
