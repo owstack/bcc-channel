@@ -1,6 +1,6 @@
 'use strict';
 
-var bchLib = require('bch-lib');
+var bchLib = require('@owstack/bch-lib');
 var fs = require('fs');
 var PrivateKey = bchLib.PrivateKey;
 var Provider = require('../lib/Provider');

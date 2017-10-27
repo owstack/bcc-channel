@@ -1,7 +1,7 @@
 'use strict';
 
 var channel = require('../');
-var bchLib = require('bch-lib');
+var bchLib = require('@owstack/bch-lib');
 
 var providerKey = new bchLib.PrivateKey(bchLib.Networks.testnet);
 

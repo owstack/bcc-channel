@@ -1,5 +1,5 @@
 {
-  "name": "bch-channel",
+  "name": "@owstack/bch-channel",
   "version": "0.0.1",
   "description": "Payment Channels support to bch.",
   "scripts": {
@@ -19,7 +19,7 @@
   "license": "MIT",
   "repository": "https://github.com/owstack/bch-channel",
   "dependencies": {
-    "bch-lib": "https://github.com/owstack/bch-lib",
+    "@owstack/bch-lib": "^0.0.1",
     "inherits": "=2.0.1"
   },
   "devDependencies": {
@@ -27,7 +27,7 @@
     "chai": "^2.3.0",
     "gulp": "^3.8.10",
     "nodejs-externs": "^0.10.0",
-    "ows-build": "https://github.com/owstack/ows-build",
+    "@owstack/ows-build": "^0.0.1",
     "request": "^2.48.0",
     "vinyl-transform": "^1.0.0"
   }

@@ -1,7 +1,7 @@
 'use strict';
 
 var should = require('chai').should();
-var bchLib = require('bch-lib');
+var bchLib = require('@owstack/bch-lib');
 var Networks = bchLib.Networks;
 
 describe('Simple Payment Channel usage', function() {

@@ -1,6 +1,6 @@
 'use strict';
 
-var bchLib = require('bch-lib');
+var bchLib = require('@owstack/bch-lib');
 var PrivateKey = bchLib.PrivateKey;
 
 var fundingKey = new PrivateKey('cb5dc68fbcaf37f29139b50fa4664b395c03e49deb966e5d49a629af005d0654');

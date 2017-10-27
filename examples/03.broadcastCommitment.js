@@ -2,7 +2,7 @@
 
 var assert = require('assert');
 var fs = require('fs');
-var bchLib = require('bch-lib');
+var bchLib = require('@owstack/bch-lib');
 var PrivateKey = bchLib.PrivateKey;
 var Consumer = require('../lib/Consumer');
 var Commitment = require('../lib/transactions/Commitment');
