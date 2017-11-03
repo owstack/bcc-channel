@@ -37,6 +37,7 @@ var providerKey = new bchLib.PrivateKey('58e78db594be551a8f4c7070fd8695363992bd1
 var fundingKey = new bchLib.PrivateKey('79b0630419ad72397d211db4988c98ffcb5955b14f6ec5c5651eec5c98d7e557', bchLib.Networks.testnet);
 var commitmentKey = new bchLib.PrivateKey('17bc93ac93f4a26599d3af49e59206e8276259febba503434eacb871f9bbad75', bchLib.Networks.testnet);
 var providerAddress = providerKey.toAddress(Networks.testnet);
+var fundingAddress = fundingKey.toAddress(Networks.testnet);
 
 var getConsumer = function() {
 
@@ -62,7 +63,7 @@ var getConsumer = function() {
 var getFundedConsumer = function() {
   var result = getConsumer();
   result.consumer.processFunding([{
-    'address': 'mq9uqc4W8phHXRPt3ZWUdRpoZ9rkR67Dw1',
+    'address': fundingAddress,
     'txid': '787ef38932601aa6d22b844770121f713b0afb6c13fdd52e512c6165508f47cd',
     'vout': 1,
     'ts': 1416205164,
@@ -70,7 +71,7 @@ var getFundedConsumer = function() {
     'amount': 0.5,
     'confirmationsFromCache': false
   }, {
-    'address': 'mq9uqc4W8phHXRPt3ZWUdRpoZ9rkR67Dw1',
+    'address': fundingAddress,
     'txid': 'c1003b5e2c9f5eca65bde73463035e5dffcfbd3c234e55e069cfeebb513293e4',
     'vout': 0,
     'ts': 1416196853,
